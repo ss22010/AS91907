@@ -12,6 +12,9 @@
 }
 
 body{
+    padding: 0px;
+    margin: 0px;
+    font-size: 1vh;
     background-color: lightskyblue;
 }
 .grid {
@@ -54,7 +57,7 @@ body{
     background-color: transparent;
     grid-column: 3 / 6;
     grid-row: 2;
-    font-size: 8rem;
+    font-size: 8em;
     align-items: center;  
     white-space: nowrap;
     min-width: max-content; 
@@ -63,7 +66,7 @@ body{
     grid-column: 3 / 5;
     grid-row: 3;
     display: grid;
-    font-size: 2rem;
+    font-size: 2em;
     font-family: Manrope;
     color: black;
     background: transparent;
