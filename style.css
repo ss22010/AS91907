@@ -11,21 +11,18 @@
     font-family: FWC2026;
 }
 
-body{
+
+body {
     padding: 0px;
     margin: 0px;
-    font-size: 1vh;
     background-color: lightskyblue;
 }
+
 .grid {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-
     grid-template-rows: repeat(6, 1fr);
-
-    column-gap: 20px;
-    row-gap: 0;
-
+    gap: 0px 20px;
     width: 100%;
     height: 100vh;
 }
@@ -33,41 +30,96 @@ body{
 .cell {
     display: none;
     background-color: transparent;
-    
     overflow: hidden;
 }
+
 .cell1 {
     transform: skewX(-15deg);
     display: grid;
     background-color: white;
-    grid-column: 5;
-    grid-row: 3 / 5;
+    grid-area: 3 / 5 / 5;
 }
 
 .cell2 {
     transform: skewX(-15deg);
     display: grid;
     background-color: white;
-    grid-column: 6 / 8;
-    grid-row: 1 / 7;
+    grid-area: 1 / 6 / 7 / 8;
 }
-.heading {
+
+.headings {
+    z-index: 1;
     display: grid;
     color: black;
     background-color: transparent;
-    grid-column: 3 / 6;
+    grid-column: 2 / 5;
     grid-row: 2;
-    font-size: 8em;
-    align-items: center;  
-    white-space: nowrap;
-    min-width: max-content; 
+    grid-template-rows: auto auto;
+    align-content: center;
+    row-gap: 0;
+    margin: 0;
+    min-width: 0;
 }
+
+.heading1 {
+    font-size: clamp(1.5em, 3vw, 3em);
+}
+
+.heading2 {
+    font-size: clamp(3em, 8vw, 8em);
+}
+
 .subheading {
-    grid-column: 3 / 5;
-    grid-row: 3;
+    grid-area: 3 / 2 / auto / 5;
     display: grid;
-    font-size: 2em;
+    align-self: start;
+    font-size: clamp(1em, 2vw, 2em);
     font-family: Manrope;
     color: black;
     background: transparent;
 }
+button span {
+    display: inline-block;
+    transform: skew(15deg);
+}
+button {
+    width: 100%;
+    height: 3em;
+
+    transform: skew(-15deg);
+    background: white;
+    font-family: Manrope;
+    font-size: 1em;
+    align-self: center;
+    justify-self: stretch;
+}
+
+.signin {
+    grid-area: 4 / 2;  
+}
+
+.signup {
+    grid-area: 4 / 3;
+}
+.rectangle {
+    display: grid;
+    grid-column: 2 / 10;
+    grid-row: 5;
+    height: 40%;
+    background-color: lightgrey;
+    grid-template-columns: repeat(5, 1fr);
+    transform: skew(-15deg);
+    grid-template-rows: 1fr;
+    gap: 0 20px;
+}
+.info-card {
+    height: 100%;
+    width: 100%;
+    padding: 5px 0 0 5px;
+}
+h3 {
+    margin-top: 0;
+    letter-spacing: 1px;
+    
+}
+
