@@ -8,6 +8,7 @@
 html,
 body {
     min-height: 100%;
+    overflow-x:hidden;
 }
 
 body {
@@ -18,21 +19,23 @@ header {
     display: flex;
     width: 100%;
     height: 100%;
-    background-color: blue;
+    background-color: black;
     padding: 50px;
 }
 
 .half {
     flex: 1;
     flex-direction: column;
-    background-color: green;
+    background-color: black;
     padding: 20px;
+    color: white
     
 }
 
 .title {
     font-size: clamp(3rem, calc(7vw + 1rem), 8rem);
     font-weight: 700;
+    color: gold;
 }
 .school-name {
     font-size: clamp(1.5em, calc(2vw + 1rem), 3em);
@@ -41,19 +44,21 @@ header {
 .slogan {
     font-size: clamp(1rem, calc(2vw + 1rem), 1.5rem);
     max-width: 70%;
-    
 }
 
 button {
     margin-top: 50px;
     width: 30%;
     transform: skewX(-15deg);
+    border-color: gold;
+    background-color: transparent;
+    color: gold;
 }
 
 .first-box {
     display: flex;
     height: 300px;
-    background-color: red;
+    background-color: black;
     padding: 50px;
     
 }
@@ -62,7 +67,8 @@ button {
     flex: 1;
     flex-direction: column;
     gap: 20px;
-    background-color: blueviolet;
+    background-color: lightgray;
+    
     padding: 20px;
     display: flex;
     align-items: center;
@@ -82,6 +88,7 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 0;
 }
 
 .vs {
@@ -108,7 +115,7 @@ button {
 .line {
     width: 20%;
     height: 2px;
-    background: black;
+    background: white;
 }
 
 .head {
@@ -122,7 +129,8 @@ button {
     justify-content: center;
     gap: 1rem;
     width: 100%;
-    background-color: coral;
+    background-color: black;
+    color: white;
 }
 
 .upcoming-w {
@@ -130,7 +138,7 @@ button {
     flex-direction: row;
     gap: 20px;
     padding: 50px;
-    background-color: lightblue;
+    background-color: black;
 }
 
 .upcoming-m {
@@ -138,7 +146,7 @@ button {
     flex-direction: row;
     gap: 20px;
     padding: 50px;
-    background-color:bisque;
+    background-color: black;
 }
 
 .match {
@@ -157,7 +165,6 @@ button {
     align-items: center;
     flex-direction: column;
     gap: 10px;
-    background-color: lightcoral;
     text-wrap: nowrap;
     
 }
@@ -205,7 +212,7 @@ button {
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
-    background-color: lightsalmon;
+    background-color: black;
     display: flex;
     flex-wrap: nowrap;
     gap: 20px;
@@ -216,7 +223,7 @@ button {
 
 .mvps {
     display: flex;
-    background-color: red;
+    background-color: black;
     padding: 50px;
     align-content: center;
     justify-content: center;
@@ -230,7 +237,7 @@ button {
     flex-direction: row;
     flex: 1;
     min-width: 0;
-    background-color: aqua;
+    background-color: gray;
     text-wrap: nowrap;
     padding: 0 20px;
     gap: clamp(1rem, 3vw, 4rem);
@@ -272,8 +279,6 @@ button {
     padding: 50px;
     justify-content: center;
     background-color: magenta;
-    
-
 }
 
 table {
