@@ -133,15 +133,22 @@ button {
     background-color: lightblue;
 }
 
+.upcoming-m {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 50px;
+    background-color:bisque;
+}
+
 .match {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: lightgreen;
     flex: calc((100% - 40px) / 3);
     min-width: calc((100% - 40px) / 3);
     padding: 10px;
-    
 }
 
 .fixture {
@@ -162,16 +169,16 @@ button {
 }
 
 .fixture span {
-  font-size: clamp(0.1rem, 0.6vw, 1rem);
+  font-size: clamp(0.1rem, 0.9vw, 1rem);
 }
 
 .fixture h3 {
-    font-size: clamp(0.5rem, 1vw, 1.5rem);
+    font-size: clamp(0.5rem, 1.3vw, 2rem);
 }
 .small-vs {
     margin: 5px;
     padding: 4px;
-    font-size: 10px;
+    font-size: clamp(0.5rem, 1vw, 2rem);
     border: 1px solid white;
     border-radius: 50%;
     background-color: transparent;
@@ -205,4 +212,128 @@ button {
     padding: 20px;
     align-items: stretch;
     justify-content: flex-start;
+}
+
+.mvps {
+    display: flex;
+    background-color: red;
+    padding: 50px;
+    align-content: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.mvp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex: 1;
+    min-width: 0;
+    background-color: aqua;
+    text-wrap: nowrap;
+    padding: 0 20px;
+    gap: clamp(1rem, 3vw, 4rem);
+}
+
+.mvp .text {
+    min-width: 0;
+}
+
+.nmber {
+    font-family: Impact, sans-serif;
+    font-size: clamp(3em, 12vw, 10em);
+    font-weight: 900;
+    line-height: 1;
+    flex-shrink: 0;
+    max-width: 30%;
+    text-align: right;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+    font-weight: 900;
+    .details {
+        text-wrap: wrap;
+        font-size: clamp(0.5rem, 1vw, 1rem);
+        font-weight: 400;
+    }
+}
+
+.player-name {
+    margin-top: 30px;
+}
+
+.table {
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+    background-color: magenta;
+    
+
+}
+
+table {
+    background-color: orange;
+    width: 100%;
+    font-size: clamp(0.8rem, 2vw, 2rem);
+    text-wrap: nowrap;
+    border-collapse: separate; 
+    border-spacing: 10px;
+}
+
+thead {
+    text-align: left;
+    font-weight: 900;
+}
+
+tbody {
+    text-align: left;
+    font-weight: 400;
+}
+
+th, td {
+    padding: 1px 16px;
+    border: 1px solid black;
+    transform: skewX(-15deg);
+    background-color: white;
+}
+
+td:nth-child(1),
+th:nth-child(1),
+th:nth-child(3),
+td:nth-child(3) {
+    font-weight: 900;
+    text-align: center;
+}
+
+.half-table {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: green;
+    padding: 20px;
+}
+
+
+.half-table img {
+    max-width: 100%;
+    max-height: 80%;
+
+}
+
+
+
+.half-table button {
+    margin-top: 12px;
+    align-self: flex-end;
+    width: 65%;
+    padding: 10px;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    :span {
+        color: green;
+    }
 }
