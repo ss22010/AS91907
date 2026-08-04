@@ -101,7 +101,8 @@ button {
 .details {
     display: flex;
     gap: 30px;
-    font-size: clamp(0.8rem, 1vw, 1rem);
+    font-size: clamp(0.7rem, 1vw, 1rem);
+    white-space: nowrap;
 }
 
 .line {
@@ -137,8 +138,10 @@ button {
     justify-content: center;
     align-items: center;
     background-color: lightgreen;
+    flex: calc((100% - 40px) / 3);
+    min-width: calc((100% - 40px) / 3);
     padding: 10px;
-
+    
 }
 
 .fixture {
@@ -149,7 +152,6 @@ button {
     gap: 10px;
     background-color: lightcoral;
     text-wrap: nowrap;
-    width: 40%;
     
 }
 
@@ -173,4 +175,34 @@ button {
     border: 1px solid white;
     border-radius: 50%;
     background-color: transparent;
+}
+
+
+.sliding-container::-webkit-scrollbar {
+    height: 7px;
+}
+.sliding-container::-webkit-scrollbar-track {
+    background: none;
+    border-radius: 10px;
+}
+.sliding-container::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+}
+
+.sliding-container::-webkit-scrollbar-thumb:hover {
+    background: white;
+}
+
+.sliding-container {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color: lightsalmon;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding: 20px;
+    align-items: stretch;
+    justify-content: flex-start;
 }
