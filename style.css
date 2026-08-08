@@ -1,4 +1,5 @@
 
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -18,10 +19,12 @@ body {
 header {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: black;
     padding: 50px;
 }
+
+
 
 .half {
     flex: 1;
@@ -42,7 +45,7 @@ header {
 }
 
 .slogan {
-    font-size: clamp(1rem, calc(2vw + 1rem), 1.5rem);
+    font-size: clamp(1rem, 2vw, 1.5rem);
     max-width: 70%;
 }
 
@@ -50,7 +53,7 @@ button {
     margin-top: 50px;
     width: 30%;
     transform: skewX(-15deg);
-    border-color: gold;
+    border: 0.1px solid gold;
     background-color: transparent;
     color: gold;
 }
@@ -60,15 +63,36 @@ button {
     height: 300px;
     background-color: black;
     padding: 50px;
-    
+}
+.container {
+    background-color: rgba(1, 7, 2, 0.788);
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    border-radius: 20px;
+    height: 100%;
+}
+
+
+.container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
 }
 
 .third {
     flex: 1;
+    height: 100%;
     flex-direction: column;
     gap: 20px;
-    background-color: lightgray;
-    
+    color: white;
+    border-radius: inherit;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -81,6 +105,7 @@ button {
     max-height: 70%;
     width: auto;
     height: auto;
+    
 }
 
 .third.two-third {
@@ -133,29 +158,24 @@ button {
     color: white;
 }
 
-.upcoming-w {
+.upcoming {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
     padding: 50px;
     background-color: black;
 }
 
-.upcoming-m {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    padding: 50px;
-    background-color: black;
-}
 
 .match {
     display: flex;
+    scroll-snap-align: center;
     justify-content: space-between;
     align-items: center;
-    background-color: lightgreen;
-    flex: calc((100% - 40px) / 3);
-    min-width: calc((100% - 40px) / 3);
+    border: 1px solid gray;
+    border-radius: 20px;
+    color: white;
+    min-width: fit-content;
     padding: 10px;
 }
 
@@ -164,51 +184,64 @@ button {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     text-wrap: nowrap;
     
 }
 
 .fixture img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 70%;
+    max-height: 70%;
+    width: auto;
+    height: auto;
     
 }
 
 .fixture span {
-  font-size: clamp(0.1rem, 0.9vw, 1rem);
+  font-size: clamp(0.3rem, 1vw, 1rem);
 }
 
 .fixture h3 {
-    font-size: clamp(0.5rem, 1.3vw, 2rem);
+    font-size: clamp(0.7rem, 2vw, 2rem);
 }
 .small-vs {
     margin: 5px;
     padding: 4px;
-    font-size: clamp(0.5rem, 1vw, 2rem);
-    border: 1px solid white;
+    font-size: clamp(0.9rem, 1.5vw, 3rem);
+    border: 1px solid gold;
+    color: gold;
     border-radius: 50%;
     background-color: transparent;
 }
 
-
 .sliding-container::-webkit-scrollbar {
-    height: 7px;
-}
-.sliding-container::-webkit-scrollbar-track {
-    background: none;
-    border-radius: 10px;
-}
-.sliding-container::-webkit-scrollbar-thumb {
-    background: white;
-    border-radius: 10px;
+  display: none;
 }
 
-.sliding-container::-webkit-scrollbar-thumb:hover {
-    background: white;
+.scrollbar-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+.scrollbar-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(218, 165, 32,0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.scrollbar-dot.active {
+  width: 20px;
+  background-color: gold;
+  border-radius: 4px;
 }
 
 .sliding-container {
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 20px;
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
@@ -219,6 +252,18 @@ button {
     padding: 20px;
     align-items: stretch;
     justify-content: flex-start;
+    border-radius: 20px;
+}
+
+.sliding-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sliding-container:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
 }
 
 .mvps {
@@ -237,13 +282,27 @@ button {
     flex-direction: row;
     flex: 1;
     min-width: 0;
-    background-color: gray;
-    text-wrap: nowrap;
+    background-color: rgba(1, 7, 2, 0.788);
+    color: white;
+    border-radius: 20px;
     padding: 0 20px;
     gap: clamp(1rem, 3vw, 4rem);
 }
 
+.mvp:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mvp:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
 .mvp .text {
+    margin-top: 5px;
+    margin-bottom: 5px;
     min-width: 0;
 }
 
@@ -255,12 +314,13 @@ button {
     flex-shrink: 0;
     max-width: 30%;
     text-align: right;
+    color: transparent; 
+    -webkit-text-stroke: 2px gold; 
 }
 
 .text {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     font-size: clamp(0.5rem, 1.5vw, 1.5rem);
     font-weight: 900;
     .details {
@@ -278,13 +338,14 @@ button {
     display: flex;
     padding: 50px;
     justify-content: center;
-    background-color: magenta;
+    background-color: black;
 }
 
 table {
-    background-color: orange;
+    
+    border-radius: 20px;
     width: 100%;
-    font-size: clamp(0.8rem, 2vw, 2rem);
+    font-size: clamp(0.7rem, 1vw, 1rem);
     text-wrap: nowrap;
     border-collapse: separate; 
     border-spacing: 10px;
@@ -302,9 +363,9 @@ tbody {
 
 th, td {
     padding: 1px 16px;
-    border: 1px solid black;
+    border: 1px solid gold;
     transform: skewX(-15deg);
-    background-color: white;
+    color: white; 
 }
 
 td:nth-child(1),
@@ -319,26 +380,27 @@ td:nth-child(3) {
     display: flex;
     flex: 1;
     flex-direction: column;
-    background-color: green;
+    align-items: flex-end;
+    gap: 10px;
     padding: 20px;
+    max-width: fit-content;
 }
-
 
 .half-table img {
     max-width: 100%;
     max-height: 80%;
-
+    width: auto;
+    height: auto;
+    display: block;
 }
 
 
 
-.half-table button {
+.mens-table {
     margin-top: 12px;
     align-self: flex-end;
     width: 65%;
     padding: 10px;
-    font-size: clamp(1rem, 1.5vw, 2rem);
-    :span {
-        color: green;
-    }
+    font-size: clamp(0.2rem, 1vw, 2rem);
 }
+

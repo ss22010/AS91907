@@ -9,7 +9,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+ 
     </head>
+
     <body>
 
         <header>
@@ -51,28 +53,33 @@
 
             <section class="first-box">
 
-                <div class="third">
-                    <img src="img-placeholder.jpg">
-                    <h3 class="team-name">TEAM NAME</h3>
-                </div>
+                <div class="container">
 
-                <div class="third two-third">
-
-                    <div class="vs">VS</div>
-
-                    <div class="details">
-                        <span class="time">HH:MM PM</span>
-                        <span class="date">DD MONTH YYYY</span>
+                    <div class="third">
+                        <img src="img-placeholder.jpg">
+                        <h3 class="team-name">TEAM NAME</h3>
                     </div>
-                    
+
+                    <div class="third two-third">
+
+                        <div class="vs">VS</div>
+
+                        <div class="details">
+                            <span class="time">HH:MM PM</span>
+                            <span class="date">DD MONTH YYYY</span>
+                        </div>
+                        
+                    </div>
+
+                    <div class="third">
+                        <img src="img-placeholder.jpg">
+                        <h3 class="team-name">TEAM NAME</h3>
+
+
+                    </div>
+
                 </div>
-
-                <div class="third">
-                    <img src="img-placeholder.jpg">
-                    <h3 class="team-name">TEAM NAME</h3>
-
-
-                </div>
+                
 
 
             </section>
@@ -90,9 +97,9 @@
 
             </section>
 
-            <section class="upcoming-w">
+            <section class="upcoming">
 
-                <div class="sliding-container">
+                <div class="sliding-container" id="sliding-container-womens">
 
                     <div class="match">
 
@@ -205,6 +212,8 @@
                     </div> 
                 </div>
                 
+                <div class="scrollbar-dots" id="scrollbar-dots-womens"></div>
+
 
 
             </section>
@@ -222,9 +231,9 @@
 
             </section>
 
-            <section class="upcoming-m">
+            <section class="upcoming">
 
-                <div class="sliding-container">
+                <div class="sliding-container"  id="sliding-container-mens">
 
                     <div class="match">
 
@@ -336,6 +345,8 @@
 
                     </div> 
                 </div>
+
+                <div class="scrollbar-dots" id="scrollbar-dots-mens"></div>
                 
 
 
@@ -398,103 +409,146 @@
 
             <section class="table">
 
-                <div class="half-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>POS</th>
-                                <th>TEAM</th>
-                                <th>PTS</th>
-                            </tr>
-                        </thead>
+                <div class="container">
 
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Avonside Girls</td>
-                                <td>30</td>
-                            </tr>
+                    <div class="half-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>POS</th>
+                                    <th>TEAM</th>
+                                    <th>PTS</th>
+                                </tr>
+                            </thead>
 
-                            <tr>
-                                <td>2</td>
-                                <td>CGHS</td>
-                                <td>27</td>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Avonside Girls</td>
+                                    <td>30</td>
+                                </tr>
 
-                            <tr>
-                                <td>3</td>
-                                <td>Villa Maria</td>
-                                <td>26</td>
-                            </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>CGHS</td>
+                                    <td>27</td>
+                                </tr>
 
-                            <tr>
-                                <td>4</td>
-                                <td>LHS 1st XI Girls</td>
-                                <td>18</td>
-                            </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Villa Maria</td>
+                                    <td>26</td>
+                                </tr>
 
-                            <tr>
-                                <td>5</td>
-                                <td>Hillmorton High School</td>
-                                <td>18</td>
-                            </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>LHS 1st XI Girls</td>
+                                    <td>18</td>
+                                </tr>
 
-                            <tr>
-                                <td>6</td>
-                                <td>CASH 1st XI</td>
-                                <td>16</td>
-                            </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Hillmorton High School</td>
+                                    <td>18</td>
+                                </tr>
 
-                            <tr>
-                                <td>7</td>
-                                <td>Burnside 1st XI</td>
-                                <td>15</td>
-                            </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>CASH 1st XI</td>
+                                    <td>16</td>
+                                </tr>
 
-                            <tr>
-                                <td>8</td>
-                                <td>Rangiora High School</td>
-                                <td>15</td>
-                            </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Burnside 1st XI</td>
+                                    <td>15</td>
+                                </tr>
 
-                            <tr>
-                                <td>9</td>
-                                <td>St Andrew's College</td>
-                                <td>15</td>
-                            </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Rangiora High School</td>
+                                    <td>15</td>
+                                </tr>
 
-                            <tr>
-                                <td>10</td>
-                                <td>Rangi Ruru</td>
-                                <td>7</td>
-                            </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>St Andrew's College</td>
+                                    <td>15</td>
+                                </tr>
 
-                            <tr>
-                                <td>11</td>
-                                <td>Rolleston College</td>
-                                <td>6</td>
-                            </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>Rangi Ruru</td>
+                                    <td>7</td>
+                                </tr>
 
-                            <tr>
-                                <td>12</td>
-                                <td>Papanui High School 1st XI Girls</td>
-                                <td>3</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                <tr>
+                                    <td>11</td>
+                                    <td>Rolleston College</td>
+                                    <td>6</td>
+                                </tr>
+
+                                <tr>
+                                    <td>12</td>
+                                    <td>Papanui High School 1st XI Girls</td>
+                                    <td>3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="half-table">
+                        <img src="img-placeholder.jpg">
+                        <button class="mens-table">
+                            <span>VIEW MENS 1ST XI TABLE  ></span>
+                        </button>
+                    </div>
                 </div>
-
-                <div class="half-table">
-
-                    <img src="img-placeholder.jpg">
-                    <button class="mens-table">VIEW MENS 1ST XI TABLE  ></button>
-
-                </div>
-
             </section>
 
     </main>
 
+    <script>
+        (function() {
+            document.querySelectorAll('.sliding-container').forEach((container, i) => {
+                const dotsContainer = document.querySelectorAll('.scrollbar-dots')[i];
+                const slides = [...container.children];
+                const dots = [];
+
+                // Generate dots
+                slides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.className = 'scrollbar-dot' + (index === 0 ? ' active' : '');
+                dot.dataset.index = index;
+                dotsContainer.appendChild(dot);
+                dots.push(dot);
+                });
+
+                // Set active dot
+                const setActive = i => dots.forEach(d => d.classList.toggle('active', d.dataset.index == i));
+
+                // Find closest slide to center
+                const getIndex = () => {
+                const center = container.scrollLeft + container.clientWidth / 2;
+                return slides.reduce((best, slide, i) => {
+                    const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
+                    return Math.abs(slideCenter - center) < Math.abs(slides[best].offsetLeft + slides[best].offsetWidth / 2 - center) ? i : best;
+                }, 0);
+                };
+
+                // Scroll to slide
+                const scrollTo = i => {
+                const slide = slides[i];
+                container.scrollTo({ left: slide.offsetLeft - (container.clientWidth - slide.offsetWidth) / 2, behavior: 'smooth' });
+                };
+
+                container.addEventListener('scroll', () => setActive(getIndex()));
+                dots.forEach(d => {
+                d.onclick = () => scrollTo(+d.dataset.index);
+                });
+            });
+            })();
+    </script>
 
 
     </body>
