@@ -401,6 +401,10 @@ td:nth-child(3) {
     align-self: flex-end;
     width: 65%;
     padding: 10px;
+<<<<<<< Updated upstream
     font-size: clamp(0.2rem, 1vw, 2rem);
+=======
+    font-size: clamp(0.5rem, 1.5vw, 2rem);
+>>>>>>> Stashed changes
 }
 
