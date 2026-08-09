@@ -30,9 +30,6 @@
 
             </div>
 
-            <div class="half">
-
-            </div>
 
         </header>
 
@@ -515,19 +512,16 @@
                 const slides = [...container.children];
                 const dots = [];
 
-                // Generate dots
                 slides.forEach((_, index) => {
-                const dot = document.createElement('div');
-                dot.className = 'scrollbar-dot' + (index === 0 ? ' active' : '');
-                dot.dataset.index = index;
-                dotsContainer.appendChild(dot);
-                dots.push(dot);
+                    const dot = document.createElement('div');
+                    dot.className = 'scrollbar-dot' + (index === 0 ? ' active' : '');
+                    dot.dataset.index = index;
+                    dotsContainer.appendChild(dot);
+                    dots.push(dot);
                 });
 
-                // Set active dot
                 const setActive = i => dots.forEach(d => d.classList.toggle('active', d.dataset.index == i));
 
-                // Find closest slide to center
                 const getIndex = () => {
                 const center = container.scrollLeft + container.clientWidth / 2;
                 return slides.reduce((best, slide, i) => {
@@ -536,18 +530,17 @@
                 }, 0);
                 };
 
-                // Scroll to slide
                 const scrollTo = i => {
-                const slide = slides[i];
-                container.scrollTo({ left: slide.offsetLeft - (container.clientWidth - slide.offsetWidth) / 2, behavior: 'smooth' });
+                    const slide = slides[i];
+                    container.scrollTo({ left: slide.offsetLeft - (container.clientWidth - slide.offsetWidth) / 2, behavior: 'smooth' });
                 };
 
                 container.addEventListener('scroll', () => setActive(getIndex()));
                 dots.forEach(d => {
-                d.onclick = () => scrollTo(+d.dataset.index);
+                    d.onclick = () => scrollTo(+d.dataset.index);
                 });
             });
-            })();
+        })();
     </script>
 
 
